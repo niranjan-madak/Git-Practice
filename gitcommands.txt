@@ -1,4 +1,4 @@
-:diffg RE<<<<<<< HEAD
+
 ## This file contains all the basic git commands required for using git in software development....
 
 
