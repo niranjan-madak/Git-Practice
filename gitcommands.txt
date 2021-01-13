@@ -94,6 +94,71 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 
 
 *********************** MERGING OF BRANCHES *************************************************************
+
+ # git merge <branch name>  ==>this command basically merge the requested branch to the current branch , most of the cases it is master branch
+
+ // note if there is not any conflict then merge will be successfull .
+// but if there is any conflict in merging then we have to use a merge tool and for that we first of all we configure mergetool 
+
+**********CONFIGURING MERGE TOOL*****************
+
+# git config merge.tool vimdiff
+# git config merge.conflictstyle diff3
+# git config mergetool.prompt false
+
+**********CONFIGURING MERGE TOOL***************** after configuring the tool run
+
+# git mergetool  ==> this command will provide you the inteface , how to  do further operations----------------
+
+@@@@@@@@@@@ You will see a vimdiff display in following format @@@@@@@@@@@@@@@@@@
+
+  ╔═══════╦══════╦════════╗
+  ║       ║      ║        ║
+  ║ LOCAL ║ BASE ║ REMOTE ║
+  ║       ║      ║        ║
+  ╠═══════╩══════╩════════╣
+  ║                       ║
+  ║        MERGED         ║
+  ║                       ║
+  ╚═══════════════════════╝
+
+THESE ARE --
+LOCAL – this is file from the current branch
+
+BASE – common ancestor, how file looked before both changes
+
+REMOTE – file you are merging into your branch
+
+MERGED – merge result, this is what gets saved in the repo
+
+You can navigate among these views using ctrl+w. You can directly reach MERGED view using ctrl+w followed by j.
+
+@@@@@@@ You could edit the MERGED view the following way(OPTIONAL)
+
+// for doing this type i  => i, will provide the facility to write below something in the editor
+ 
+If you want to get changes from REMOTE
+
+:diffg RE  
+If you want to get changes from BASE
+
+:diffg BA  
+If you want to get changes from LOCAL
+
+:diffg LO 
+
+
+@@@@@@@@@@@@@@@@@@AND FINALLY @@@@@@@@@@@@@@@@
+Save, Exit, Commit and Clean up
+
+# press esc and write ==>  :wqa      ==> to save and exit from vi   and after that --
+
+# git commit -m "message"  ==> to commit the changes in the local repo
+
+# git clean  ==> this removes  extra files (e.g. *.orig) created by diff tool.
+ 
 =======
 all branch merged successfully..
 >>>>>>> another-branch
+
+*********************** MERGING OF BRANCHES ************************************************************* Done
