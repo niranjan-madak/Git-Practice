@@ -17,7 +17,9 @@
 ******************after the above operation now create a local repo folder on ur system ****************************************
 ***************and then go to that directory , using cd directory path *************************************
 *********************************** use this command # git init    => this command initializes basic structure of local repo **********************
-******************** after that create some txt file or files to test all the bellow commands ********************************* 
+******************** after that create some txt file or files to test all the bellow commands *********************************
+
+# touch <filename.extension>  => this is used to create a file in the local repo.. for Ex. touch file1.pdf 
 
 
 
@@ -60,5 +62,35 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 # git log --stat  => shows how many or what type of changes are done in the local as well as remote repo
 
 # git log --patch  =>this shows the difference between current commit and previous commit
+
+# git checkout  => this command works like a undo operation , for example if something is wrong with ur file u can simply checkout to come to the previous state (applicable for single file )
+# git checkout -f  => applicable for all files
+
+# git diff --staged  => fhow changes with last commit
+
+# git checkout -b <branchname>  =>this command creates new branch on the local repo
+
+# git checkout <branchname>  =>this command switch from one branch to another branch 
+
+
+
+
+*********************** REMOVING FILES FROM LOCAL REPOSITORY *************************************
+
+# git rm <filename with extensiom>  => this command removes files from the local repo
+
+# git rm --cached <filename>   => this command removes files from local repo but not from working tree
+
+
+***************************RENAMING FILES ******************************
+
+# git mv <old file name> <new file name>  => this command renames files in local repo
+
+# git stash   => this commands adds files to the local repo to work with latter
+
+# git stash list => this shows the stashed files in the local repo
+
+
+*********************** MERGING OF BRANCHES *************************************************************
 
 
