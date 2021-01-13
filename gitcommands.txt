@@ -86,3 +86,10 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 
 # git mv <old file name> <new file name>  => this command renames files in local repo
 
+
+# git stash   => this commands adds files to the local repo to work with latter
+
+# git stash list => this shows the stashed files in the local repo
+
+
+*********************** MERGING OF BRANCHES *************************************************************
