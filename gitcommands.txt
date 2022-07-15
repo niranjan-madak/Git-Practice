@@ -162,3 +162,14 @@ all branch merged successfully..
 >>>>>>> another-branch
 
 *********************** MERGING OF BRANCHES ************************************************************* Done
+
+********************* git commands to revert back the commits using commit-hash ***************************
+# git log --oneline  --> to find out the commit hash
+# git checkout <commit-hash>
+# git revert <commit-hash>
+
+************************************************************************************************************
+
+********************************** git commands to delete a branch from a local and remote repository ***************************
+# git branch -d <branch-name-to-be-deleted>  --> to delete a branch from a local repository
+# git push origin --delete <branch-name-to-be-deleted>   --> to delete a branch from a remote repository.
